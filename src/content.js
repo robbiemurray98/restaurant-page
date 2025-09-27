@@ -7,8 +7,10 @@ export const homePage = function(){
     const heading = document.createElement('h1');
 
     heading.textContent = 'Bob\'s Bistro';
+    const descSpan = document.createElement('span');
+    descSpan.textContent = 'Bob\'s Bistro ';
     const descPara = document.createElement('p');
-    descPara.textContent = 'Bob\'s Bistro is a five star Michelin Restaurant in Akron Ohio. We serve a wide range of mouth watering dishes at everyday prices. Downtown Akron we\'ve made our Home! Making use of the beautiful scenery, you\'ll enjoy eating your meals in paradise.';
+    descPara.textContent = 'is a five star Michelin Restaurant in Akron Ohio. We serve a wide range of mouth watering dishes at everyday prices. Downtown Akron we\'ve made our Home! Making use of the beautiful scenery, you\'ll enjoy eating your meals in paradise.';
     const descParaContainer = document.createElement('div');
     descParaContainer.id = 'desc-para-container'
 
@@ -16,6 +18,7 @@ export const homePage = function(){
 
     // content.appendChild(heroImage);
     content.appendChild(heading);
+    descPara.prepend(descSpan);
     descParaContainer.appendChild(descPara);
     content.appendChild(descParaContainer);
 
